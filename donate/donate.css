@@ -1,0 +1,381 @@
+@import url(https://fonts.googleapis.com/css?family=Muli:300,400,400i,500&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700&display=swap);
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(68, 68, 68, 0);
+}
+
+body {
+    margin: 0;
+    font-family: "Muli", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color:black;
+    text-align: left;
+    background-color: #efefef;
+    height: 100vh;
+  }
+
+  section{
+    padding: 80px 0;
+  }
+  
+  .max-width {
+    max-width: 1300px;
+    padding: 0px 40px;
+    margin: auto;
+  }
+  
+  .navmenu {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    padding: 15px 0;
+    background:crimson;
+    box-shadow: 2px 2px 10px 3px rgba(97, 97, 97, 0.7);
+  }
+  
+  .navmenu .max-width {
+    display: flex;
+    height: 30px;
+    align-items: center;
+    justify-content: space-between;
+    vertical-align: middle;
+  }
+  
+  .navmenu .logo a {
+    font-size: 24px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .navmenu .menu{
+      
+      align-items: center;
+      margin-bottom: 0px;
+  }
+  
+  .navmenu .menu li {
+    list-style: none;
+    display: inline-block;
+  }
+  
+  .navmenu .menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 24px;
+    transition: color 0.3s ease;
+  }
+
+  .navmenu .menu form{
+    display: inline-block;
+ }
+
+ .navmenu .menu form .logout{
+    color: white;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 24px;
+    transition: color 0.3s ease;
+    padding: 0px 0px;
+ }
+
+ .navmenu .menu form button.logout:focus{
+  outline: none;
+  border: none;
+}
+
+/* modal style */
+.backdrop{
+  position: fixed;
+  display: none;
+  z-index: 100;
+  border-color: transparent;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal{
+  position: fixed;
+  z-index: 200;
+  opacity: 0;
+  transform:translateY(-3rem);
+  transition: opacity 200ms ease-out , transform 200ms ease-out;
+  top: 35%;
+  left: 30%;
+  width: 40%;
+  height: 20%;
+  background: white;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  margin: 0px auto;
+}
+
+.modal_title{
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.modal_actions{
+  text-align: center;
+}
+
+.modal_action{
+  border: 1px solid #0e4f1f;
+  background: #0e4f1f;
+  text-decoration: none;
+  color:white;
+  font:inherit;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.modal_action:hover ,
+.modal_action:active {
+  background: #2ddf5c;
+  border-color:#2ddf5c ;
+}
+
+.modal_action--negative{
+  background: red;
+  border-color:red ;
+}
+
+.modal_action--negative:hover ,
+.modal_action--negative:active {
+  background: #ff5454;
+  border-color:#ff5454 ;
+}
+
+.open{
+  display: block;
+}
+
+.mobileopen{
+  display: block;
+}
+
+.modalopen{
+  display: none !important;
+}
+
+.modaltransform{
+  opacity: 1;
+  transform:translateY(0);
+}
+
+  /* kids style */
+  .width{
+      max-width: 1300px;
+      padding: 0px 20px;
+      margin: auto;
+  }
+
+
+  .text-title{
+    width: 100%;
+    padding-bottom: 1rem;
+    position: relative;
+  }
+
+  .kids{
+    font-family: "Muli", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .rw{
+    padding: 10px 0px;
+    margin-bottom: 10px;  
+    border-bottom: 2px solid black;
+  }
+
+  .row .cell{
+    margin: 10px 0px;   
+}
+
+.row .image{
+    text-align: center;
+    
+}
+
+  .row .cell img{
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 20px;
+      margin: auto;
+      text-align: center;
+  }
+
+  .row .words .text{
+  font-family: "Muli", sans-serif;
+  font-size: 18px ;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.row .donate{
+  font-family: "Muli", sans-serif;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+}
+
+ .row .donate .select{
+  font-family: "Muli", sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.row .donate form{
+  height: 180px;
+  position: relative;
+}
+
+.row .donate form .amount{
+  margin-bottom: 80px;
+}
+
+.row .donate .text{
+  text-align: center;
+}
+
+.row .donate .button{
+  color: white;
+  border: 2px solid #fe03e9;
+  background-color: #fe03e9;
+  cursor: pointer;
+  
+}
+
+.btn-primary:focus {
+  box-shadow: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus, 
+.show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, 
+.btn-primary:not(:disabled):not(.disabled):active, 
+.show>.btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: crimson;
+  border: 2px solid #fe03e9;
+}
+
+
+/*footer style*/
+.button:focus {
+  outline: none;
+}
+
+.main-footer {
+  background: black;
+  margin-top: 48px;
+  padding: 32px;
+}
+
+.main-footer__links{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.main-footer__link{
+  margin: 0 0.75rem;
+  color: white;
+  text-decoration: none;
+}
+
+.main-footer__link a{
+  color: white;
+  text-decoration: none;
+}
+
+.main-footer__link a:hover , 
+.main-footer__link a:active{
+  color: #ccc;
+}
+
+  @media (min-width: 900px) {
+    .max-width {
+      padding: 0px 60px;
+    }
+  
+    .menu-btn {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .navmenu .menu {
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      left: -100%;
+      top: 0;
+      text-align: center;
+      background: #080808;
+      padding-top: 60px;
+      transition: all 0.3s ease;
+    }
+  
+    .navmenu .menu.active {
+      left: 0;
+    }
+  
+    .menu-btn i.active:before {
+      content: "\f00d";
+    }
+  
+    .navmenu .menu li {
+      display: block;
+    }
+  
+    .navmenu .menu li a {
+      display: inline-block;
+      margin: 20px 0px;
+      font-size: 24px;
+    }
+  
+    .menu-btn {
+      display: block;
+      z-index: 10;
+    }
+  }
+  
